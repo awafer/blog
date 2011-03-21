@@ -10,6 +10,9 @@ gem "bson_ext", "~> 1.2"
 
 gem "haml"
 gem "haml-rails"
+
+gem 'ckeditor', '3.4.2.pre'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

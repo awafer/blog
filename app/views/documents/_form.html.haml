@@ -1,0 +1,28 @@
+%script{:type=>"text/javascript"}$(function(){$('#document_body').wysiwyg();});
+= form_for @document do |f|
+  -if @document.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@document.errors.count, "error")} prohibited this document from being saved:"
+      %ul
+        - @document.errors.full_messages.each do |msg|
+          %li= msg
+  
+  %table
+    %tr
+      %td=f.label :title
+      %td= f.text_field :title
+    %tr
+      %td=f.label :category
+      %td=f.select :category, Document::ARTICLE_CATEGORY
+    %tr
+      %td=f.label :author
+      %td= f.text_field :author
+    %tr
+      %td=f.label :date
+      %td= f.date_select :date
+    %tr
+      %td= f.label :body
+      %td=f.text_area :body
+    %tr
+      %td
+      %td= f.submit 'Submit'

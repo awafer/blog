@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @document.title
+%p
+  %b Category:
+  = @document.category
+%p
+  %b Author:
+  = @document.author
+%p
+  %b Date:
+  = @document.date
+%p
+  %b Body:
+  = simple_format(@document.body)
+
+= link_to 'Edit', edit_document_path(@document)
+\|
+= link_to 'Back', documents_path
