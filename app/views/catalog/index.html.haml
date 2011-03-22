@@ -1,0 +1,15 @@
+-if notice
+  %p#notice= notice
+
+%h1 Document Catalog
+
+%table
+  %tr
+    %th Title
+    %th Date
+    
+  -@documents.each do |document|
+    %tr
+      %td=link_to document.title, document
+      %td=document.date
+		
