@@ -2,10 +2,10 @@
 
 %table
   %tr
-    %th Name
+    %th Title
     %th
 
-  - @documents.each do |document|
+  -@documents.each do |document|
     %tr
       %td=link_to document.title, document
       %td

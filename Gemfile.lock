@@ -32,8 +32,6 @@ GEM
     bson (1.2.4)
     bson_ext (1.2.4)
     builder (2.1.2)
-    ckeditor (3.4.2.pre)
-      mime-types (>= 1.16)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     haml (3.0.25)
@@ -87,7 +85,6 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext (~> 1.2)
-  ckeditor (= 3.4.2.pre)
   haml
   haml-rails
   mongoid (= 2.0.0.rc.6)
