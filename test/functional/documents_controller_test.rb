@@ -3,6 +3,13 @@ require 'test_helper'
 class DocumentsControllerTest < ActionController::TestCase
   setup do
     @document = documents(:one)
+    @update = {
+    	:title => 'lorem Ipsum',
+    	:author=> 'someone',
+    	:date => 2011-03-16,
+    	:body=>'somebody',
+    	:category=>'FX',
+    }
   end
 
   test "should get index" do
@@ -18,7 +25,7 @@ class DocumentsControllerTest < ActionController::TestCase
 
   test "should create document" do
     assert_difference('Document.count') do
-      post :create, :document => @document.attributes
+      post :create, :document => @update
     end
 
     assert_redirected_to document_path(assigns(:document))
@@ -35,7 +42,7 @@ class DocumentsControllerTest < ActionController::TestCase
   end
 
   test "should update document" do
-    put :update, :id => @document.to_param, :document => @document.attributes
+    put :update, :id => @document.to_param, :document => @update
     assert_redirected_to document_path(assigns(:document))
   end
 
