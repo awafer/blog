@@ -12,6 +12,10 @@ class DocumentsController < ApplicationController
 	:theme_advanced_resizing => true,
 	:skin => "o2k7",
     #:skin_variant => "silver",
+    #:template_external_list_url => "js/template_list.js",
+    #:external_link_list_url => "js/link_list.js",
+    #:external_image_list_url => "js/image_list.js",
+    #:media_external_list_url => "js/media_list.js",
   }
   # GET /documents
   # GET /documents.xml

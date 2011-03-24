@@ -14,7 +14,7 @@
   = @document.date
 %p
   %b Body:
-  = sanitize @document.body 
+  =  raw @document.body 
 
 = link_to 'Edit', edit_document_path(@document)
 \|
