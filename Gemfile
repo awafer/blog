@@ -11,7 +11,7 @@ gem "bson_ext", "~> 1.2"
 gem "haml"
 gem "haml-rails"
 
-
+gem 'tiny_mce'
 # Use unicorn as the web server
 # gem 'unicorn'
 

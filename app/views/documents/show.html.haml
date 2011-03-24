@@ -14,6 +14,8 @@
   = @document.date
 %p
   %b Body:
-  = simple_format(@document.body)
+  = sanitize @document.body 
 
-= link_to 'Back', catalog_path
+= link_to 'Edit', edit_document_path(@document)
+\|
+= link_to 'Back', documents_path

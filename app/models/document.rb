@@ -7,6 +7,5 @@ class Document
   field :category, :type=> String 
   ARTICLE_CATEGORY = ["FX","Stocks","bonds"]
   validates :title, :author, :body, :category, :presence =>true
-  validates :title, :uniqueness =>true
   default_scope :order =>{:date=>'desc'}
 end
