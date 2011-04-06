@@ -1,9 +1,11 @@
 Blog::Application.routes.draw do
-  get "catalog/index"
+  resources :categories
+
+  get "category/index"
 
   resources :documents
 
-  root :to=>'catalog#index', :as=>'catalog'
+  root :to=>'categories#index', :as=>'categories'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -12,7 +12,7 @@
       %td= f.text_field :title
     %tr
       %td=f.label :category
-      %td=f.select :category, Document::ARTICLE_CATEGORY
+      %td=f.select :category, Category.where(:active=>true).collect{|c| [c.name, c.id]}
     %tr
       %td=f.label :author
       %td= f.text_field :author

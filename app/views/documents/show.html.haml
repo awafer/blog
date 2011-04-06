@@ -5,7 +5,7 @@
   %h1= @document.title
 %p
   %b Category:
-  = @document.category
+  = Category.find(@document.category).name
 %p
   %b Author:
   = @document.author
