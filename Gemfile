@@ -1,18 +1,22 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem "mongoid", "2.0.0.rc.6"
-gem "bson_ext", "~> 1.2"
+gem 'mongoid'
+gem 'bson_ext'
 
-gem "haml"
-gem "haml-rails"
+gem 'haml'
+gem 'haml-rails'
 
-gem 'devise', '>= 1.2.0'
+#gem "mongo_mapper"
+gem 'devise'
 gem 'tiny_mce'
+
+gem 'SystemTimer', '1.2.3'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

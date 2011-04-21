@@ -1,9 +1,15 @@
 Blog::Application.routes.draw do
-  root :to => "documents#index"
+
+  root :to => "home#index"
+  #get "home/index"
+
+  devise_for :users
+
+  #root :to => "documents#index"
 
   resources :categories
 
-  get "category/index"
+  #get "category/index"
 
   resources :documents
 

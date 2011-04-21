@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   
+  before_filter :authenticate_user!, :only=>{:create,:edit,:new,:update}
   
   # GET /categories
   # GET /categories.xml

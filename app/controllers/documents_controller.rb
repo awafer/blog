@@ -19,6 +19,8 @@ class DocumentsController < ApplicationController
   }
   # GET /documents
   # GET /documents.xml
+  
+  before_filter :authenticate_user!, :only=>{:create,:edit,:new,:update}
   def index
     @documents = Document.all
 
