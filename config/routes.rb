@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
 
-  root :to => "home#index"
+  root :to => "documents#index"
   #get "home/index"
 
   devise_for :users

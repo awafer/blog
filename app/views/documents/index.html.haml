@@ -3,17 +3,21 @@
 %table
   %tr
     %th Title
-    %th
+    %th Operation
 
   -@documents.each do |document|
     %tr
       %td=link_to document.title, document
       %td
-        =link_to 'Edit', edit_document_path(document)      
-        %br
-        =link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete
-      
+        - if user_signed_in?
+          =link_to 'Edit', edit_document_path(document)      
+          %br
+          =link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete
+          
 %br
-
-= link_to 'New Document', new_document_path
-= link_to 'Categories', categories_path
+- if user_signed_in?
+  = link_to 'New Document', new_document_path
+  = link_to 'Categories', categories_path
+  = link_to 'Logout', destroy_user_session_path
+- else
+  = link_to 'Login', new_user_session_path

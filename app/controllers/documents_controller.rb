@@ -20,7 +20,7 @@ class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.xml
   
-  before_filter :authenticate_user!, :only=>{:create,:edit,:new,:update}
+  before_filter :authenticate_user!, :except=>[:index,:show]
   def index
     @documents = Document.all
 
