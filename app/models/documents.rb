@@ -1,5 +1,6 @@
 class Document
   include Mongoid::Document
+  include Mongoid::MultiParameterAttributes
   field :title, :type => String
   field :author, :type => String
   field :date, :type => Date

@@ -9,7 +9,7 @@
   = @document.author
 %p
   %b Date:
-  = @document.date
+  = @document.date.strftime("%Y-%m-%d")
 %p
   %b Body:
   =  raw @document.body 
